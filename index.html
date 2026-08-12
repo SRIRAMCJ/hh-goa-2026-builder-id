@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#f4f0e8" />
+  <meta name="theme-color" content="#176b3a" />
   <title>HH Goa — Builder ID</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,12 +15,14 @@
     <a class="brand" href="https://hhgoa.com/" target="_blank" rel="noreferrer"><span class="brand-mark">HH</span><span>GOA</span></a>
     <span class="event-meta">28 — 31 OCT 2026 · GOA, INDIA</span>
   </header>
+
   <main class="shell">
     <section class="intro">
       <p class="eyebrow">SHORTLISTING TASK · BUILDER ID</p>
       <h1>Make your<br><span>builder card.</span></h1>
-      <p class="lede">Upload a photo, add your stack, and generate a simple HH Goa identity card made to share.</p>
+      <p class="lede">Upload a photo, pick your builder persona, and generate a Goa-inspired HH identity card made to share.</p>
     </section>
+
     <section class="workspace">
       <div class="panel form-panel">
         <div class="step"><span>01</span> YOUR DETAILS</div>
@@ -28,14 +30,27 @@
           <input id="photoInput" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif,.heic,.heif" />
           <div class="upload-icon">+</div><strong>Upload your photo</strong><small>JPG, PNG, WEBP or HEIC · portrait or landscape</small>
         </label>
+
         <div class="fields">
           <label><span>Name</span><input id="nameInput" maxlength="28" placeholder="Your name" /></label>
           <label><span>Stack / role</span><input id="roleInput" maxlength="36" placeholder="AI / Full Stack / Designer" /></label>
-          <label><span>Builder title</span><input id="titleInput" maxlength="28" placeholder="The Ship-It Builder" /></label>
+          <label>
+            <span>Builder title</span>
+            <select id="titleInput">
+              <option value="The Ship-It Builder">The Ship-It Builder</option>
+              <option value="The Beachside Hacker">The Beachside Hacker</option>
+              <option value="The Coconut Coder">The Coconut Coder</option>
+              <option value="The Terminal Tactician">The Terminal Tactician</option>
+              <option value="The Goan Problem Solver">The Goan Problem Solver</option>
+              <option value="The Launch Mode Builder">The Launch Mode Builder</option>
+            </select>
+          </label>
         </div>
+
         <button class="primary" id="generateBtn" type="button">Generate card <span>→</span></button>
         <p class="hint">No login. Your photo stays in your browser.</p>
       </div>
+
       <div class="panel preview-panel">
         <div class="preview-head"><div class="step"><span>02</span> PREVIEW</div><span class="ratio">16:10</span></div>
         <div class="card-stage">
@@ -45,8 +60,10 @@
         <div class="actions"><button id="downloadBtn" type="button" disabled>Download PNG</button><button id="shareBtn" type="button" disabled>Share to X ↗</button></div>
       </div>
     </section>
+
     <footer><span>LESS NOISE. MORE SIGNAL.</span><a href="https://hhgoa.com/" target="_blank" rel="noreferrer">hhgoa.com ↗</a></footer>
   </main>
+
   <script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
   <script src="app.js"></script>
 </body>
